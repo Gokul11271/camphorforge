@@ -1,0 +1,82 @@
+openapi: 3.0.3
+info:
+  title: CareFlow Orchestration API
+  version: 0.1.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /v1/patients:
+    post:
+      summary: Create patient reference
+      requestBody:
+        required: true
+      responses:
+        '201':
+          description: Created
+  /v1/journeys:
+    post:
+      summary: Create care journey
+      responses:
+        '201':
+          description: Created
+  /v1/journeys/{journeyId}:
+    get:
+      summary: Get care journey and timeline
+      parameters:
+        - name: journeyId
+          in: path
+          required: true
+          schema: {type: string, format: uuid}
+      responses:
+        '200': {description: Journey}
+        '404': {description: Not found}
+  /v1/journeys/{journeyId}/triage:
+    post:
+      summary: Record triage
+      parameters:
+        - name: journeyId
+          in: path
+          required: true
+          schema: {type: string, format: uuid}
+      responses:
+        '200': {description: Updated}
+  /v1/referrals:
+    post:
+      summary: Create referral
+      responses:
+        '201': {description: Created}
+  /v1/referrals/{referralId}/accept:
+    post:
+      summary: Accept referral
+      responses:
+        '200': {description: Accepted}
+  /v1/referrals/{referralId}/appointment:
+    post:
+      summary: Attach appointment
+      responses:
+        '200': {description: Appointment attached}
+  /v1/referrals/{referralId}/transport:
+    post:
+      summary: Create transport request
+      responses:
+        '201': {description: Transport created}
+  /v1/referrals/{referralId}/arrived:
+    post:
+      summary: Record patient arrival
+      responses:
+        '200': {description: Arrival recorded}
+  /v1/facilities/search:
+    get:
+      summary: Capability-aware facility search
+      responses:
+        '200': {description: Ranked facilities}
+  /v1/events:
+    post:
+      summary: Ingest external event idempotently
+      responses:
+        '202': {description: Accepted}
+  /v1/followups:
+    post:
+      summary: Create follow-up
+      responses:
+        '201': {description: Created}

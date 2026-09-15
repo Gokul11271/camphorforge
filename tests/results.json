@@ -1,0 +1,18 @@
+{
+  "passed": 12,
+  "failed": 0,
+  "tests": [
+    "happy-path-reaches-follow-up",
+    "happy-path-closes",
+    "duplicate-event-is-idempotent",
+    "external-timeout-becomes-pending",
+    "rejection-preserves-refer-state",
+    "diagnostic-delay-remains-open",
+    "partial-success-keeps-journey-open",
+    "offline-replay-no-duplicate",
+    "out-of-order-transition-rejected",
+    "audit-created",
+    "events-have-source",
+    "closure-gate-blocks-early-close"
+  ]
+}

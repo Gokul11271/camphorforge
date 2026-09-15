@@ -1,0 +1,16 @@
+{
+  "environment": "synthetic-local",
+  "journey": "NCD referral",
+  "scenarios": [
+    "happy_path",
+    "duplicate_event",
+    "timeout",
+    "referral_rejection",
+    "diagnostic_delay",
+    "partial_success",
+    "offline_replay",
+    "out_of_order",
+    "audit",
+    "closure_gate"
+  ]
+}

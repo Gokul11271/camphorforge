@@ -1,0 +1,12 @@
+{
+  "transaction_id": "txn-demo-001",
+  "providers": [
+    {
+      "provider_ref": "TN-DH-DEMO",
+      "provider_name": "District Hospital",
+      "service": "GENERAL_MEDICINE",
+      "slot_start": "2026-09-15T16:20:00+05:30",
+      "availability": "AVAILABLE"
+    }
+  ]
+}

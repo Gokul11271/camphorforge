@@ -1,0 +1,69 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "demo-patient-001",
+        "identifier": [
+          {
+            "system": "https://healthid.abdm.gov.in",
+            "value": "DEMO-ABHA-281"
+          }
+        ],
+        "name": [
+          {
+            "text": "Synthetic Patient"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bp-001",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/demo-patient-001"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "DEMO-BP"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 164,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "ref-001",
+        "status": "active",
+        "intent": "order",
+        "subject": {
+          "reference": "Patient/demo-patient-001"
+        },
+        "code": {
+          "text": "Specialist review"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Task",
+        "id": "task-ref-001",
+        "status": "requested",
+        "intent": "order",
+        "for": {
+          "reference": "Patient/demo-patient-001"
+        }
+      }
+    }
+  ]
+}
