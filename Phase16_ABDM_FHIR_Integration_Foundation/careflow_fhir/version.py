@@ -1,3 +1,0 @@
-FHIR_VERSION = "4.0.1"
-ABDM_IG_VERSION = "6.5.0"
-ABDM_IG_PACKAGE = "ndhm.in#6.5.0"

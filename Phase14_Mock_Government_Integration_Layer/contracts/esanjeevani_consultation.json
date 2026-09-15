@@ -1,8 +1,0 @@
-{
-  "consultation_id": "ESANJ-DEMO-001",
-  "patient_ref": "DEMO-ABHA-281",
-  "provider_ref": "demo-specialist-001",
-  "status": "COMPLETED",
-  "clinical_outcome_ref": "clinical-outcome-demo-001",
-  "referral_recommended": true
-}

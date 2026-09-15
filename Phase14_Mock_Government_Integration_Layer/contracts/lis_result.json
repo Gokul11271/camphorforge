@@ -1,9 +1,0 @@
-{
-  "report_id": "LIS-DEMO-001",
-  "order_id": "LAB-ORDER-DEMO-001",
-  "status": "FINAL",
-  "issued_at": "2026-09-15T11:30:00+05:30",
-  "tests": [
-    {"code": "CLCI-HBA1C", "value": "9.4", "unit": "%"}
-  ]
-}

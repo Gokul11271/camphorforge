@@ -1,8 +1,0 @@
-{
-  "event_id": "event-demo-001",
-  "source_system": "UHI",
-  "event_type": "AppointmentConfirmed",
-  "journey_id": "JRN-DEMO-001",
-  "occurred_at": "2026-09-15T10:15:00Z",
-  "payload": {}
-}

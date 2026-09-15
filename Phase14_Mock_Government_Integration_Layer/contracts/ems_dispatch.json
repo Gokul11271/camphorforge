@@ -1,8 +1,0 @@
-{
-  "transport_id": "EMS-DEMO-001",
-  "status": "DISPATCHED",
-  "mode": "BLS",
-  "pickup": "PHC Cluster 03",
-  "destination": "District Hospital",
-  "eta_minutes": 42
-}
