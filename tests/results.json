@@ -1,18 +1,198 @@
 {
-  "passed": 12,
-  "failed": 0,
-  "tests": [
-    "happy-path-reaches-follow-up",
-    "happy-path-closes",
-    "duplicate-event-is-idempotent",
-    "external-timeout-becomes-pending",
-    "rejection-preserves-refer-state",
-    "diagnostic-delay-remains-open",
-    "partial-success-keeps-journey-open",
-    "offline-replay-no-duplicate",
-    "out-of-order-transition-rejected",
-    "audit-created",
-    "events-have-source",
-    "closure-gate-blocks-early-close"
-  ]
+  "timestamp": "2026-09-15T05:19:04.658012+00:00",
+  "passed_count": 34,
+  "failed_count": 0,
+  "total_count": 34,
+  "pass_rate_percent": 100.0,
+  "buckets": {
+    "Bucket 1: Core Workflow & State Machine": [
+      {
+        "name": "1.1-care-journey-reaches-follow-up",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "1.2-care-journey-reaches-closed",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "1.3-closure-gate-blocks-premature-close",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "1.4-duplicate-event-is-idempotent",
+        "status": "PASS",
+        "detail": ""
+      }
+    ],
+    "Bucket 2: Freshness, Provenance & Reality Engine": [
+      {
+        "name": "2.1-freshness-engine-evaluates-fresh-data",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "2.2-freshness-engine-flags-stale-data-and-penalizes-confidence",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "2.3-freshness-engine-handles-class-u-unknown-capacity",
+        "status": "PASS",
+        "detail": ""
+      }
+    ],
+    "Bucket 3: ABDM FHIR Profile Alignment": [
+      {
+        "name": "3.1-fhir-patient-aligned-with-abdm-ig-6.5.0",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "3.2-fhir-bp-observation-aligned-with-abdm-ig-6.5.0",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "3.3-fhir-condition-aligned-with-abdm-ig-6.5.0",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "3.4-fhir-bundle-aligned-with-abdm-ig-6.5.0",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "3.5-fhir-validator-quarantines-invalid-resources",
+        "status": "PASS",
+        "detail": ""
+      }
+    ],
+    "Bucket 4: Adapter Logic & Chaos Scenarios": [
+      {
+        "name": "4.1-abdm-sandbox-client-generates-correlation-headers",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.2-consent-request-created-in-requested-state",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.3-consented-hie-exchange-succeeds-with-valid-fhir-bundle",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.4-revoked-consent-blocks-hie-exchange",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.5-uhi-slot-search-returns-fresh-slots",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.6-uhi-appointment-booking-confirmed",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.7-esanjeevani-session-scheduled-with-room-url",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.8-esanjeevani-consultation-completed-with-prescriptions",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.9-tamil-nadu-mtm-screening-fetched",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.10-maharashtra-mmu-tribal-screening-fetched",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.11-np-ncd-profile-linked",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.12-nikshay-tb-treatment-card-linked",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.13-lis-order-to-result-with-critical-alert",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.14-pharmacy-stock-query-includes-freshness-and-confidence",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.15-ems-ambulance-dispatch-with-live-gps-mode",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.16-external-timeout-handled-as-pending-retryable",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "4.17-referral-rejection-reroutes-without-state-corruption",
+        "status": "PASS",
+        "detail": ""
+      }
+    ],
+    "Bucket 5: Security, RBAC & DPDP Controls": [
+      {
+        "name": "5.1-facility-matching-ranks-qualified-facility-number-one",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "5.2-rbac-allows-authorized-doctor-and-blocks-asha-for-prescriptions",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "5.3-crypto-vault-encrypts-and-decrypts-phi-field",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "5.4-crypto-vault-masks-abha",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "5.5-threat-engine-detects-and-blocks-webhook-replay",
+        "status": "PASS",
+        "detail": ""
+      }
+    ]
+  },
+  "integration_maturity": {
+    "abdm_gateway": "Level 3 (Automated Double Verified)",
+    "abdm_fhir_hie": "Level 3 (Schema-Aligned)",
+    "uhi_network": "Level 2 (Protocol-Aligned Double)",
+    "esanjeevani": "Level 2 (Interface Double)",
+    "state_adapters": "Level 2 (Synthetic Reference)",
+    "programmes": "Level 2 (Synthetic Reference)",
+    "lis_pharmacy_ems": "Level 3 (Local Double Verified)"
+  }
 }
